@@ -1,11 +1,8 @@
 <template>
   <div class="home">
-    <table-component :table="table" :items="items" border loaderColor="#FFB917">
+    <table-component :table="table" :items="items" border>
         <template #header>
-          <div>
-            <custom-button rounded>LOAD SELECTED</custom-button>
-            <custom-button @click="table.deleteRows" rounded>DELETE SELECTED</custom-button>
-          </div>
+          <custom-button @click="table.deleteRows" rounded>DELETE SELECTED</custom-button>
         </template>
 
         <template #actions="row">
@@ -18,6 +15,27 @@
                 </template>
             </confirm>
         </template>
+
+        <template #name="row">
+          <prompt-component
+           title="Change Name"
+           v-model="row.name"
+           @ok="row._table.save()" />
+        </template>
+
+        <template #username="row">
+          <prompt-component
+           title="Change Username"
+           v-model="row.username"
+           @ok="row._table.save()" />
+        </template>
+
+        <template #email="row">
+          <prompt-component
+           title="Change Email"
+           v-model="row.email"
+           @ok="row._table.save()" />
+        </template>
     </table-component>
   </div>
 </template>
@@ -27,6 +45,7 @@ import CustomButton from '@/components/CustomButton.vue'
 import Table from '@/components/Table/Table'
 import TableComponent from '@/components/Table/index.vue'
 import Confirm from '@/components/Modal/Confirm.vue'
+import PromptComponent from '@/components/Modal/PromptComponent.vue'
 import userData from '../userData.json'
 
 const table = new Table({
@@ -47,13 +66,13 @@ export default {
   components: {
     TableComponent,
     CustomButton,
+    PromptComponent,
     Confirm
   },
 
   data () {
     return {
       table,
-      loader: false,
       items: userData
     }
   }

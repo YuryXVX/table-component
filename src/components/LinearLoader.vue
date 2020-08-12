@@ -28,10 +28,9 @@ const linearLoader = (h: CreateElement, props: LoaderOptions) => {
 
 export default Vue.extend({
   props: Props,
-  functional: true,
 
-  render (h, { props }) {
-    return linearLoader(h, props)
+  render (h) {
+    return linearLoader(h, this.$props)
   }
 })
 </script>

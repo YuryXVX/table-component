@@ -2,6 +2,7 @@
 import Vue, { VNode } from 'vue'
 
 import ModalComponent from './ModalComponent.vue'
+import Textfield from '../Textfield.vue'
 import CustomButton from '../CustomButton.vue'
 import Modal from './Modal'
 
@@ -46,9 +47,9 @@ export default Vue.extend({
 
         content: this.$scopedSlots.content
           ? this.$scopedSlots.content
-          : props => [
+          : (props) => [
             this.description ? this.description : '',
-            h('tr-textfield', {
+            h(Textfield, {
               props: {
                 value: this.promptValue,
                 label: this.label

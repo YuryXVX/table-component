@@ -25,6 +25,7 @@ interface TrTableOptions {
 
 class TableProps {
   onDelete?: () => void
+  onSave?: () => void
 
   private _index: { value: number }
   get index () { return this._index.value }
@@ -51,6 +52,18 @@ class TableProps {
   delete = () => {
     this.selected = false
     if (this.onDelete) this.onDelete()
+  }
+
+  save = () => {
+    return new Promise(resolve => {
+      this._loading.value = true
+      resolve()
+    }).then(() => {
+      setTimeout(() => {
+        this._loading.value = false
+      }, 500)
+      if (this.onSave) this.onSave()
+    })
   }
 };
 
