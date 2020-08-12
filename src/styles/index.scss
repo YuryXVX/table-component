@@ -1,0 +1,25 @@
+@import url('./variables/index.scss');
+@import url('./helpers.scss');
+@import url('./components/button.scss');
+@import url('./components/circularLoader.scss');
+@import url('./components/linearLoader.scss');
+@import url('./components/datepicker.scss');
+@import url('./colors.scss');
+@import url('./layout/index.scss');
+@import url('./media-query/index.scss');
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}

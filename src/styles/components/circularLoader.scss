@@ -1,0 +1,19 @@
+.circular-loader {
+  --color-circular: black;
+  --size-circular: 10px;
+  --bold-circular: 1px;
+
+  height: var(--size-circular);
+  width: var(--size-circular);
+  color: var(--color-circular);
+  position: relative;
+  display: inline-block;
+  border: var(--bold-circular) solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate-loader 1s linear infinite; }
+
+@keyframes rotate-loader {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}

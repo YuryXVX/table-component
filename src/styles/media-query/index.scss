@@ -1,0 +1,79 @@
+@media all and (max-width: 1200px) {
+  .font-size-auto {
+    font-size: var(--font-size-xl);
+  }
+
+  .line-height-auto {
+    line-height: var(--line-height-xl);
+  }
+
+  .grid-gap-auto {
+    grid-gap: var(--padding-m);
+  }
+
+  .padding-auto {
+    padding: var(--padding-m);
+  }
+
+  .margin-responsive-auto {
+    margin: var(--padding-m);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .font-size-auto {
+    font-size: var(--font-size-l);
+  }
+
+  .line-height-auto {
+    line-height: var(--line-height-l);
+  }
+
+  .grid-gap-auto {
+    grid-gap: var(--padding-s)
+  }
+
+  .padding-auto {
+    padding: var(--padding-s);
+  }
+
+  .margin-responsive-auto {
+    margin: var(--padding-s);
+  }
+}
+
+@media all and (max-width: 600px) {
+  .font-size-auto {
+    font-size: var(--font-size-m);
+  }
+
+  .line-height-auto {
+    line-height: var(--line-height-m);
+  }
+
+  .grid-gap-auto {
+    grid-gap: var(--padding-xs)
+  }
+
+  .padding-auto {
+    padding: var(--padding-s);
+  }
+
+  .padding-auto {
+    padding: var(--padding-xs);
+  }
+
+  .margin-responsive-auto {
+    margin: var(--padding-xs);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .font-size-auto {
+    font-size: var(--font-size-s);
+  }
+
+  .line-height-auto {
+    line-height: var(--line-height-s);
+  }
+}

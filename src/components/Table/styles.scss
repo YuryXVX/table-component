@@ -1,0 +1,67 @@
+.tr-table {
+  --table-width: 100%;
+
+  width: var(--table-width);
+
+  border-collapse: collapse;
+
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tr--bordered {
+    border-bottom: 2px solid #f6f6f6;
+    width: 100%;
+
+    .tr-table__tr--loader--wrapper {
+      --table-width: 0px;
+
+      position: relative;
+
+      width: 0px;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+    }
+
+    .tr-table__tr--loader {
+      position: absolute;
+
+      height: 2px;
+      bottom: -3px;
+
+      width: var(--table-width);
+
+      background: #f6f6f6;
+    }
+  }
+
+  &__tr--hover {
+    &:hover {
+      background-color: rgba(204, 204, 204, .4);
+      transition: all .3 ease;
+    }
+  }
+
+  &__th--checkbox {
+    text-align: left;
+    width: 50px;
+  }
+
+  &__th {
+    font-weight: 500;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__td {
+    font-size: 14px;
+    line-height: 16px;
+
+    font-weight: 400;
+  }
+}
