@@ -213,7 +213,7 @@ export default Vue.extend({
       ]
     )
 
-    const error = (e: string) => h('span', { class: { 'tr-input__error': true } }, e)
+    const error = (err: string) => h('span', { class: { 'tr-input__error': true } }, err)
 
     const errors = h(
       'div',

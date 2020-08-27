@@ -3,7 +3,7 @@ import Vue, { VNode } from 'vue'
 import Modal from './Modal'
 
 export default Vue.extend({
-  name: 'TrModal',
+  name: 'Modal',
 
   props: {
     title: {
