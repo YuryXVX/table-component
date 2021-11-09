@@ -1,4 +1,4 @@
-# table
+# Vue table component
 
 ## Project setup
 ```
